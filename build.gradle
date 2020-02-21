@@ -1,0 +1,54 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.4.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+}
+
+group = 'custom.dev'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.2.4.RELEASE'
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+
+	// liquibaseRuntime 'org.liquibase:liquibase-core:3.8.1'
+
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	  
+  	compile group: 'org.springframework.boot', name: 'spring-boot-starter-velocity', version: '1.4.7.RELEASE'
+  	compile group: 'org.springframework', name: 'spring-context-support', version: '4.3.5.RELEASE'
+  	compile group: 'org.springframework', name: 'spring-context', version: '5.2.3.RELEASE'
+  	compile group: 'org.apache.velocity', name: 'velocity-tools', version: '2.0'
+  
+  	//freemarker test
+  	compile group: 'org.freemarker', name: 'freemarker', version: '2.3.29'
+
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'org.postgresql:postgresql'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+test {
+	useJUnitPlatform()
+}

@@ -1,0 +1,15 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The Velocity Template">
+
+</head>
+
+<body>
+	<h1>The Velocity Template - {{replacementVariable}}</h1>
+</body>
+</html>
