@@ -10,6 +10,6 @@
 </head>
 
 <body>
-	<h1>The FreeMarker Template - {{replacementVariable}}</h1>
+	<h1>The FreeMarker Template - ${replacementVariable}</h1>
 </body>
 </html>
